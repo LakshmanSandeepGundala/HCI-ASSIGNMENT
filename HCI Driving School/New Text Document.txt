@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving School Management</title>
+</head>
+<body>
+    <h1>Welcome to the Driving School Management System</h1>
+
+    <h2>Students</h2>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.name }} - {{ student.lesson_type }} with {{ student.instructor }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Instructors</h2>
+    <ul>
+        {% for instructor in instructors %}
+            <li>{{ instructor.name }} - Contact: {{ instructor.contact }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/booking">Book a Lesson</a>
+</body>
+</html>

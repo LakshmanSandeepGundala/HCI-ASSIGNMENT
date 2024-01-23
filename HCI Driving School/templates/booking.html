@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Driving Lesson</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="book-a-lesson">Book a Driving Lesson</h1>
+
+        <form action="/booking" method="POST">
+            <label for="student_name">Student Name:</label>
+            <input type="text" id="student_name" name="student_name" required>
+
+            <label for="lesson_type">Lesson Type:</label>
+            <select id="lesson_type" name="lesson_type" required>
+                <option value="Introductory">Introductory</option>
+                <option value="Standard">Standard</option>
+                <option value="Pass Plus">Pass Plus</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <label for="instructor_id">Instructor:</label>
+            <select id="instructor_id" name="instructor_id" required>
+                <option value="1">Jane Instructor</option>
+                <option value="2">Bob Instructor</option>
+                <option value="3">Eva Thompson</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <input type="submit" value="Book Lesson">
+            <a href="/" class="link">Back to Homepage</a>
+        </form>
+    </div>
+</body>
+
+</html>

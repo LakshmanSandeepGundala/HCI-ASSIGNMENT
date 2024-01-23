@@ -1,0 +1,28 @@
+from flask import Flask, render_template, request, redirect, url_for
+
+app = Flask(__name__)
+
+# Sample data (replace with your actual data)
+students = [
+    {'name': 'John Doe', 'lesson_type': 'Introductory', 'instructor': 'Jane Instructor'},
+    {'name': 'Alice Smith', 'lesson_type': 'Standard', 'instructor': 'Bob Instructor'},
+    # Add more sample data as needed
+]
+
+instructors = [
+    {'name': 'Jane Instructor', 'contact': '123-456-7890'},
+    {'name': 'Bob Instructor', 'contact': '987-654-3210'},
+    # Add more sample data as needed
+]
+
+@app.route('/')
+def index():
+    return render_template('index.html', students=students, instructors=instructors)
+
+@app.route('/booking')
+def booking():
+    # Add booking functionality
+    return render_template('booking.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
